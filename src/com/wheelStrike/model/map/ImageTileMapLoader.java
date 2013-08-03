@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 /**
  * @author GromHoll
- * @see ./res/tileColors.png for color hex values
+ * @see "tileColors.png" for color hex values
  */
 public class ImageTileMapLoader implements TileMapLoader {
 
