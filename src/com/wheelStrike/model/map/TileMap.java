@@ -40,6 +40,6 @@ public class TileMap {
     }
 
     public boolean isOnMap(int x, int y) {
-        return !(x < 0 || x >= getWidth() || y < 0 || y >= getHeight());
+        return (x >= 0 && x < getWidth() && y >= 0 && y < getHeight());
     }
 }
