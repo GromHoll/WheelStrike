@@ -2,6 +2,7 @@ package com.wheelStrike.entry;
 
 import com.golem.*;
 import com.golem.common.KeyEvent;
+import com.golem.java.JavaGolemFactory;
 import com.golem.java.JavaImageLoader;
 import com.golem.java.JavaKeyInputHandler;
 import com.golem.java.JavaWindow;
@@ -20,14 +21,15 @@ public class TestMain {
         TileMapLoader tileMapLoader = new ImageTileMapLoader();
         TileMap tileMap = tileMapLoader.loadTileMap("./res/tiles/testLevel.png");
 
-        Window window = new JavaWindow(tileMap.getWidth()* (int) Tile.width,
-                                       tileMap.getWidth()* (int) Tile.width,
-                                       "Map View");
-
-        KeyInputHandler keyInputHandler = new JavaKeyInputHandler(window);
+        GolemFactory factory = new JavaGolemFactory();
+        Window window = factory.getWindow(tileMap.getWidth()* (int) Tile.width,
+                                          tileMap.getWidth()* (int) Tile.width,
+                                          "Map View");
+        KeyInputHandler keyInputHandler = factory.getKeyInputHandler(window);
+        ImageLoader imageLoader = factory.getImageLoader();
+        Screen screen = window.getScreen();
 
         HashMap<Tile, Image> imageMap = new HashMap<Tile, Image>();
-        ImageLoader imageLoader = new JavaImageLoader();
         imageMap.put(Tile.FOREST, imageLoader.loadImage("./res/tiles/forest.png"));
         imageMap.put(Tile.ROAD, imageLoader.loadImage("./res/tiles/road.png"));
         imageMap.put(Tile.CONCRETE, imageLoader.loadImage("./res/tiles/concrete.png"));
@@ -36,8 +38,6 @@ public class TestMain {
         imageMap.put(Tile.SAND, imageLoader.loadImage("./res/tiles/sand.png"));
         imageMap.put(Tile.WATER, imageLoader.loadImage("./res/tiles/water.png"));
         imageMap.put(Tile.SEA, imageLoader.loadImage("./res/tiles/sea.png"));
-
-        Screen screen = window.getScreen();
 
         screen.present();
         while(true) {
