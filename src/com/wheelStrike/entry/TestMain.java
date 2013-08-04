@@ -1,10 +1,9 @@
 package com.wheelStrike.entry;
 
-import com.golem.Image;
-import com.golem.ImageLoader;
-import com.golem.Screen;
-import com.golem.Window;
+import com.golem.*;
+import com.golem.common.KeyEvent;
 import com.golem.java.JavaImageLoader;
+import com.golem.java.JavaKeyInputHandler;
 import com.golem.java.JavaWindow;
 import com.wheelStrike.model.map.ImageTileMapLoader;
 import com.wheelStrike.model.map.Tile;
@@ -24,6 +23,8 @@ public class TestMain {
         Window window = new JavaWindow(tileMap.getWidth()* (int) Tile.width,
                                        tileMap.getWidth()* (int) Tile.width,
                                        "Map View");
+
+        KeyInputHandler keyInputHandler = new JavaKeyInputHandler(window);
 
         HashMap<Tile, Image> imageMap = new HashMap<Tile, Image>();
         ImageLoader imageLoader = new JavaImageLoader();
@@ -46,7 +47,12 @@ public class TestMain {
                 }
             }
             screen.present();
-            Thread.sleep(100);
+
+            for(KeyEvent ke : keyInputHandler.getKeyEvents()) {
+                System.out.println(ke.getChar() + " : " + ke.getCode() + " : " + ke.isPressed());
+            }
+
+            Thread.sleep(10);
         }
     }
 }

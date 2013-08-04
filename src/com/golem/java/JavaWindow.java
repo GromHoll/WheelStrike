@@ -1,10 +1,13 @@
 package com.golem.java;
 
+import com.golem.KeyEventListener;
 import com.golem.Screen;
 import com.golem.Window;
+import com.golem.common.KeyEvent;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 
 /**
@@ -42,6 +45,24 @@ public class JavaWindow extends JFrame implements Window {
     @Override
     public Screen getScreen() {
         return screen;
+    }
+
+    @Override
+    public void addKeyEventListener(final KeyEventListener listener) {
+        super.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(java.awt.event.KeyEvent e) {}
+
+            @Override
+            public void keyPressed(java.awt.event.KeyEvent e) {
+                listener.keyPressed(new KeyEvent(e.getKeyChar(), e.getKeyCode(), true));
+            }
+
+            @Override
+            public void keyReleased(java.awt.event.KeyEvent e) {
+                listener.keyReleased(new KeyEvent(e.getKeyChar(), e.getKeyCode(), false));
+            }
+        });
     }
 
     @Override

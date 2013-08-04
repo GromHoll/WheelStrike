@@ -7,8 +7,9 @@ public interface Window {
 
     public Screen getScreen();
 
-    public void dispose();
-
     public void setName(String name);
 
+    public void addKeyEventListener(KeyEventListener listener);
+
+    public void dispose();
 }
