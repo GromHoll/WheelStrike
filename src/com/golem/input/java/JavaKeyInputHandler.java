@@ -1,9 +1,9 @@
-package com.golem.java;
+package com.golem.input.java;
 
-import com.golem.KeyEventListener;
-import com.golem.KeyInputHandler;
-import com.golem.Window;
-import com.golem.common.KeyEvent;
+import com.golem.input.KeyEventListener;
+import com.golem.input.KeyInputHandler;
+import com.golem.graphics.Window;
+import com.golem.input.KeyEvent;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
-package com.golem.java;
+package com.golem.graphics.java;
 
-import com.golem.KeyEventListener;
-import com.golem.Screen;
-import com.golem.Window;
-import com.golem.common.KeyEvent;
+import com.golem.input.KeyEventListener;
+import com.golem.graphics.Screen;
+import com.golem.graphics.Window;
+import com.golem.input.KeyEvent;
 
 import javax.swing.*;
 import java.awt.*;

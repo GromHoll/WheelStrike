@@ -1,6 +1,4 @@
-package com.golem;
-
-import com.golem.common.ImageLoadException;
+package com.golem.graphics;
 
 /**
  * @author GromHoll

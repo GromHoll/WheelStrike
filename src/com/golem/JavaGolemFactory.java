@@ -1,9 +1,12 @@
-package com.golem.java;
+package com.golem;
 
 import com.golem.GolemFactory;
-import com.golem.ImageLoader;
-import com.golem.KeyInputHandler;
-import com.golem.Window;
+import com.golem.graphics.ImageLoader;
+import com.golem.graphics.java.JavaImageLoader;
+import com.golem.graphics.java.JavaWindow;
+import com.golem.input.KeyInputHandler;
+import com.golem.graphics.Window;
+import com.golem.input.java.JavaKeyInputHandler;
 
 /**
  * @author GromHoll

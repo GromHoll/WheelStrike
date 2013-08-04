@@ -1,6 +1,4 @@
-package com.golem;
-
-import com.golem.common.KeyEvent;
+package com.golem.input;
 
 import java.util.List;
 

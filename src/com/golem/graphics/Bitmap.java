@@ -1,4 +1,4 @@
-package com.golem.common;
+package com.golem.graphics;
 
 import java.util.Arrays;
 

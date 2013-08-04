@@ -1,6 +1,4 @@
-package com.golem;
-
-import com.golem.common.Bitmap;
+package com.golem.graphics;
 
 /**
  * @author GromHoll

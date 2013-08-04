@@ -1,8 +1,8 @@
 package com.wheelStrike.model.map;
 
-import com.golem.common.ImageLoadException;
-import com.golem.java.JavaImage;
-import com.golem.java.JavaImageLoader;
+import com.golem.graphics.ImageLoadException;
+import com.golem.graphics.java.JavaImage;
+import com.golem.graphics.java.JavaImageLoader;
 
 import java.util.HashMap;
 

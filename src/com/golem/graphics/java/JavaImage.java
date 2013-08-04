@@ -1,7 +1,7 @@
-package com.golem.java;
+package com.golem.graphics.java;
 
-import com.golem.common.Bitmap;
-import com.golem.Image;
+import com.golem.graphics.Bitmap;
+import com.golem.graphics.Image;
 
 /**
  * @author GromHoll

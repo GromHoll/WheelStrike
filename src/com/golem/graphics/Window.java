@@ -1,4 +1,6 @@
-package com.golem;
+package com.golem.graphics;
+
+import com.golem.input.KeyEventListener;
 
 /**
  * @author GromHoll

@@ -1,5 +1,9 @@
 package com.golem;
 
+import com.golem.graphics.ImageLoader;
+import com.golem.graphics.Window;
+import com.golem.input.KeyInputHandler;
+
 /**
  * @author GromHoll
  */

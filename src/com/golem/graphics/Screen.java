@@ -1,4 +1,4 @@
-package com.golem;
+package com.golem.graphics;
 
 /**
  * @author GromHoll

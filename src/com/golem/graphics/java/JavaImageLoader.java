@@ -1,7 +1,7 @@
-package com.golem.java;
+package com.golem.graphics.java;
 
-import com.golem.ImageLoader;
-import com.golem.common.ImageLoadException;
+import com.golem.graphics.ImageLoader;
+import com.golem.graphics.ImageLoadException;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

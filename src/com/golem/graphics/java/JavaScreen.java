@@ -1,8 +1,8 @@
-package com.golem.java;
+package com.golem.graphics.java;
 
-import com.golem.common.Bitmap;
-import com.golem.Image;
-import com.golem.Screen;
+import com.golem.graphics.Bitmap;
+import com.golem.graphics.Image;
+import com.golem.graphics.Screen;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
