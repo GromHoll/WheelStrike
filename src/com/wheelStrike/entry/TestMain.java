@@ -86,11 +86,15 @@ public class TestMain {
 
             for(int i = 0; i < tileMap.getWidth(); i++) {
                 for(int j = 0; j < tileMap.getHeight(); j++) {
-                    screen.draw(tileImageMap.get(tileMap.getTile(i, j)), i*(int) Tile.width, j*(int) Tile.height);
+                    screen.draw(tileImageMap.get(tileMap.getTile(i, j)),
+                                                 i*(int) Tile.width,
+                                                 j*(int) Tile.height);
                 }
             }
             Image jeepImage = jeepImageMap.get(jeep.getDirection());
-            screen.draw(jeepImage, (int) jeep.getX(), (int) jeep.getY());
+            screen.draw(jeepImage,
+                        (int) jeep.getX() - jeepImage.getWidth()/2,
+                        (int) jeep.getY() - jeepImage.getHeight()/2);
 
             screen.present();
             Thread.sleep(10);

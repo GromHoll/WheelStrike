@@ -7,4 +7,7 @@ public interface Image {
 
     public Bitmap getAsBitmap();
 
+    public int getWidth();
+    public int getHeight();
+
 }
